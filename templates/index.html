@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Diabetes Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="text-center" style="background-color: #f61660; color: white;" >
+            <br>
+            <h2  class='container-heading' style="font-family: 'Pacifico', cursive;" ><span class="heading_font">Diabetes Predictor</span></h2>
+            <div class='description'>
+    			<p >Diabetes is a common, chronic disease. Prediction of diabetes at an early stage can lead to improved treatment</p>
+    		</div>
+            <br>
+    	</div>
+<br><br>
+        <!-- Text Area -->
+    	<div class="container text-center">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px;margin-bottom: 5px" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+                <input class="form-input" style="width: 350px;
+                height: 25px;margin-bottom: 5px" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px;margin-bottom: 5px" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px;margin-bottom: 5px" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px;margin-bottom: 5px" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px;margin-bottom: 5px" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+
+                <input class="form-input" type="text" style="width: 350px;
+                height: 25px; margin-bottom: 5px;" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+
+                <input class="form-input" style="width: 350px;
+                height: 25px;margin-bottom: 5px;" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+<br>
+        		<input style="background: #f9f9f9;
+                border: 2px solid #000000;
+             border-radius: 1000px;
+             box-shadow: 3px 3px #8c8c8c;
+             margin-top: 10px;
+             padding: 10px 36px;
+             color: #000000;
+             display: inline-block;
+                font: italic bold 20px/1 Calibri" type="submit" class="btn btn-outline-dark" value="Predict">
+        	</form>
+    	</div>
+<br><br>
+        <!-- Footer -->
+       <div class=' text-center' style="background-color: #f61660; color: white;">
+           <div class="contact">
+               <br>
+               <a target="_blank" href="https://github.com/komalwaikar"><i style="color: white;" class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/anujkvyas"><i style="color: white;" class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Copyright © 2021 - Medical Healthcare.</p>
+           <br><br><br>
+       </div>
+
+    </body>
+</html>
